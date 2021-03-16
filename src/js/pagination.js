@@ -30,13 +30,18 @@ class SearchQuery {
 		this.page = 1;
 	}
 
+	clearGallery() {
+		this.galleryRef.innerHTML = '';
+	}
+
 	get query() {
 		return this.searchQuery;
 	}
 
 	set query(newQuery) {
 		this.searchQuery = newQuery;
-		this.resetPage;
+		this.resetPage();
+		this.clearGallery();
 	}
 }
 
