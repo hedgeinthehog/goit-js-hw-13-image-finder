@@ -19,7 +19,7 @@ function onSubmit(e) {
 
 function onEntry(entries) {
 	entries.forEach(entry => {
-		if (entry.isIntersecting && searchQuery.query !== '') {
+		if (entry.isIntersecting && searchQuery.query !== '' && searchQuery.page !== 1) {
 			searchQuery.showPhotos();
 		}
 	})
