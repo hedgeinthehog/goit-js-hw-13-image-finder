@@ -9,6 +9,7 @@ html {
 }
 
 ul {
+  padding: 0;
   list-style: none;
 }
 
@@ -17,7 +18,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  background-image: url('./images/bg-pattern.png');
+  background-color: #f1efef;
 }
 
 .search-form {
@@ -27,20 +28,37 @@ body {
 
 .search-form > input {
   width: 100%;
+  border-width: 1px;
+  border-radius: 5px;
 }
 
 .gallery {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .gallery-item {
   margin: 0.5vw;
-  width: 30vw;
+  width: 90vw;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    margin: 0.5vw;
+    width: 46vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery-item {
+    margin: 0.5vw;
+    width: 29vw;
+  }
 }
 
 .photo-card > img {
-  max-width: 30vw;
+  max-width: 100%;
   min-height: 20vw;
 }
 
